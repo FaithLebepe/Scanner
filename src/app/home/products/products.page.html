@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <ion-header >
   <ion-toolbar color="tertiary">
     <ion-title align="center">Products</ion-title>
@@ -68,74 +68,3 @@
     </ng-template>
 </ion-modal>
 </ion-content>
-=======
-<ion-header >
-  <ion-toolbar color="tertiary">
-    <ion-title align="center">Products</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-      <span>Back</span>
-    </ion-buttons>
-  </ion-toolbar>
-
-  
-</ion-header>
-
-<ion-content>
-
-  <ion-list class="ion-margin-top">
-    @for(item of items; track $index){
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <ion-img [src]="item?.cover"></ion-img>
-        </ion-thumbnail>
-
-        <ion-label>
-          {{item?.name}}
-          <p>
-            {{item?.description}}
-          </p>
-          <p>
-            <ion-text color="tertiary"> {{currency}}{{item?.price}}</ion-text>
-          </p>
-        </ion-label>
-
-        <ion-button slot="end" fill="clear" color="dark" (click)="getBarcodeData(item)">
-          <ion-icon slot="icon-only" name="barcode-outline"></ion-icon>
-        </ion-button>
-
-      </ion-item>
-    }
-  </ion-list>
-
-
-  <ion-modal
-  #barcode_modal
-  [isOpen]="showBarcode"
-  (didDismiss)="showBarcode = false"
-  [breakpoints]="[0.3, 0.5, 0.9]"
-  [initialBreakpoint]="0.5">
-    <ng-template>
-
-      <ion-header class="ion-no-border">
-        <ion-toolbar>
-          <ion-title align="center"> {{ itemModel?.name }} </ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="barcode_modal.dismiss()" color="dark">
-              <ion-icon name="close-outline"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-
-      <ion-content>
-        <div class="ion-margin">
-          Scan Barcode
-        </div>
-        <img id="barcode" class="ion-margin-top">
-      </ion-content>
-
-    </ng-template>
-</ion-modal>
-</ion-content>
->>>>>>> 8fee7a219a6936a964153dfcf78bf4c58fdb54f1
