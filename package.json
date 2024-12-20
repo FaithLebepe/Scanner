@@ -24,7 +24,11 @@
     "@capacitor/android": "6.2.0",
     "@capacitor/app": "6.0.2",
     "@capacitor/barcode-scanner": "^1.0.4",
+<<<<<<< HEAD
     "@capacitor/core": "6.2.0",
+=======
+    "@capacitor/core": "^6.2.0",
+>>>>>>> 8fee7a219a6936a964153dfcf78bf4c58fdb54f1
     "@capacitor/haptics": "6.0.2",
     "@capacitor/ios": "6.2.0",
     "@capacitor/keyboard": "6.0.3",
